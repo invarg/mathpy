@@ -72,7 +72,7 @@ def account(request, view=''):
                 return render(request, 'account/signup.html', {'msg': msg, 'm': l})
             else:
                 # show login form
-                msg = 'log in'
+                msg = 'log in'#a
                 l = set_template('account', 'login', request.user.is_authenticated())
                 return render(request, 'account/login.html', {'msg': msg, 'm': l})
     l = set_template('account', view, request.user.is_authenticated())
