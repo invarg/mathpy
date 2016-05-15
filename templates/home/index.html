@@ -1,0 +1,20 @@
+{% extends 'shared/layout.html' %}
+{% block content %}
+    <div id="content">
+        <div class="content-header">{{ cont.header }}</div>
+        <!--<h2>data base result: {{ a }}</h2>-->
+        {% if cont.img != '' %}
+            <div style="text-align:center;">
+                <div class="wrap">{{ cont.header_big }}</div>
+                <img style="max-width:100%; width:40em;"  src="{{ cont.img }}" title="{{ cont.img_title }}"/>
+            </div>
+        {% endif %}
+        {% for itm in cont.p %}
+        <p>
+            <b>{{ itm.title }}</b></br>
+            <span>{{ itm.body }}</span>
+        </p>
+        {% endfor %}
+        <h1>This page is under construction</h1>
+    </div>
+{% endblock %}

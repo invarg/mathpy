@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<data>
+    <site-description val="math site" lnk="home">Math</site-description>
+    <menu name="home" val="welcome" >
+    </menu>
+    <menu name="numbers" val="numbers">
+        <sub name="first" val="integer" />
+        <sub name="second" val="decimal"/>
+        <sub name="third" val="fractions"/>
+    </menu>
+    <menu name="client" val="fractions">
+    </menu>
+    <menu name="practice" val="practice">
+        <sub name="first" val="arithmetic"/>
+        <sub name="second" val="fractions"/>
+        <sub name="third" val="percentage"/>
+        <sub name="fourth" val="equations"/>
+    </menu>
+    <menu name="contact" val="contact us"/>
+    <menu name="account" val="account / sign out&#160;&#160;" logged="yes" >
+        <sub name="edit" val="edit"/>
+        <sub name="password" val="change password"/>
+        <sub name="logoff" val="log off"/>
+    </menu>
+    <menu name="account" val="log in&#160;&#160;" logged="no" >
+        <sub name="login" val="log in"/>
+        <sub name="signup" val="sign up"/>
+    </menu>
+    <footer>Math learning center&#160;</footer>
+</data>

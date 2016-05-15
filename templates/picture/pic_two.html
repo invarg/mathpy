@@ -1,0 +1,7 @@
+{% extends 'shared/layout.html' %}
+{% block content %}
+    <p> Test 2. Test page two.</p>
+    {% for a in root %}
+    <div>{{ a }}</div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'shared/layout.html' %}
+{% block content %}
+    <div id="gray">
+        <div class="header">Log in</div>
+        <form id="user-form" method="post" action="login" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="user-form">
+                <label class="required" for="user_name">User name:</label>
+                <input id="user_name" maxlength="254" name="user_name" type="text" />
+                <label class="required" for="password">Password:</label>
+                <input id="password" name="password" type="password" />
+            </div>
+            <div class="val" id="summary"></div>
+                <label>&nbsp;</label><input id="login" type="button" value="log in" />
+        </form>
+    </div>
+{% endblock %}

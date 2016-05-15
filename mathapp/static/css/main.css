@@ -1,0 +1,243 @@
+/*div, footer { border:solid 1px #000000!important;  }
+html, body, span, .page { border:solid 1px green!important;  }
+ #body { border:solid 0px blue!important;}*/
+  /* background image */
+/*#header > * { border:solid 1px #ff0000!important;  }*/
+
+@font-face {
+    font-family: 'source_sans_proextralight';
+    src: url('../fonts/source_san/sourcesanspro-light-webfont.eot');
+    src: url('../fonts/source_san/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/source_san/sourcesanspro-light-webfont.woff2') format('woff2'),
+         url('../fonts/source_san/sourcesanspro-light-webfont.woff') format('woff'),
+         url('../fonts/source_san/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('../fonts/source_san/sourcesanspro-light-webfont.svg#source_sans_proextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    background: url('../images/canyonPaint.png')  top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 160em;
+    z-index: -1;
+}
+/* body - min screen height */
+html, body {
+    margin:0;
+    height: 100%;
+    /*width:100%;*/
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+
+#body{
+    min-height:100%;
+    position:relative;
+}
+
+#header{
+    background: #cccccc;
+    padding:0;
+    width: 100%;
+}
+
+#page{
+    padding:0 0 5em 0;
+}
+
+#content {
+    margin: 2em 0 2em 0;
+    padding: 1em;
+    border-radius: 5px;
+    background: #ffffff;
+    min-height: 30em;
+}
+
+#footer{
+    height:5em;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(221, 150, 101);
+}
+
+#header > div, #footer > div, #page {
+    overflow: hidden;
+    width:100%;
+    max-width:60em;
+    margin:0 auto 0 auto;
+}
+
+/*#header > div {
+    overflow: hidden;
+    width:100%;
+}*/
+#header > div > div:last-child {
+    float:right;
+}
+#header > div > div > div, #header > div > div:first-child{
+    float: left;
+    padding:0 1em 0 1em;
+    line-height: 3em;
+}
+#header > div > div:first-child{
+    float:left;
+    color:orangered;
+}
+
+.h-on:last-child::after, .h-off:last-child::after{
+    content: '\27E9';
+    display: inline-block;
+    font-weight: bold;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.h-on {background: #888888; padding:0;}
+.h-on a, .h-on:last-child::after {color:#ffffff;}
+.h-off {background: #cccccc; padding:0;}
+.h-off a {color:#000000;}
+.h-off a, .h-on a{
+    font-size:large;
+    text-decoration:none;
+}
+/*------------------*/
+#sub-menu {
+    position:relative;
+    bottom:0em;
+    margin:1em 0.5em 1em 0.5em;
+    padding: 0em 1em 0 1em;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 2px;
+    line-height: 2em;
+}
+#sub-menu *{
+    display: inline-block;
+    padding:0 0.5em 0 0.5em;
+}
+#sub-menu a{
+    color:#888888;
+    text-decoration: none;
+}
+#sub-menu .sub-on a {
+    color:#000000;
+}
+.wrap-left{
+    overflow:hidden;
+    float: left;
+    margin: 0.5em;
+    max-width:20em;
+    max-height:14em;
+}
+
+.content-header{
+    position:relative;
+    display: block;
+}
+.content-header, .wrap {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: orangered;
+    margin: 1em auto 1em auto;
+}
+
+.wrap{
+    position: absolute;
+    min-width:95%;
+    display: inline-block;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+}
+h1{
+    text-align: center;
+}
+
+#gray  {
+    max-width: 40em;
+    min-height: 30em;
+    margin: 5em auto 5em auto;
+    border-radius: 5px;
+    background: #eeeeee;
+    text-align: center;
+    /*box-shadow:0px 0em 0.5em 0em #555;*/
+}
+
+.header {
+    color: #ffffff;
+    background: #dd9665;
+    border-radius: 5px 5px 0 0;
+    line-height: 3em;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=url],
+input[type=number], input[type=button], input[type=submit], textarea, select{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5em;
+    margin-left:-0.5em;
+    font-size: 1em;
+}
+
+input[type=button], input[type=submit]{
+    background: #ccc;
+}
+
+label{
+    display: block;
+    text-align: left;
+    margin-top: 0.5em;
+    margin-left:-0.5em;
+}
+
+.user-form{
+    width:15em;
+    margin:2em auto 1em auto;
+}
+#user-form input[type=text], #user-form input[type=password], #user-form textarea{
+    width: 100%;
+}
+
+.val{
+    color:#f00;
+    font-size:small;
+}
+/*------------------*/
+@media screen and  (max-width: 768px) {
+    #header > div > div > div, #header > div > div:first-child,
+    #header > div > div:last-child {
+        line-height: 2em;
+        /*display: block;*/
+        float: none;
+        text-align:center;
+        padding:0;
+    }
+    #header > div > div:first-child {
+        text-align: left;
+        padding-left: 1em;
+    }
+    #header{
+    background: #444;
+    }
+    #logo{
+        top:0.5em;
+        /*left:0;*/
+        height:2em;
+      }
+    #header > div:last-child{
+    /*border-top:solid 1px #000000;*/
+    }
+    #body div#sub-menu {
+        text-align: center;
+    }
+
+    #content, #gray {
+        margin: 1em auto 1em auto;
+    }
+}

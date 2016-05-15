@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<data>
+    <item name = "home">
+        <content name="initial">
+            <h1>Welcome to our math learning site</h1>
+            <img name="math_cap.jpg" title="math cap"/>
+            <link val="click me">
+            </link>
+            <p title="">
+            </p>
+        </content>
+    </item>
+    <item name="numbers">
+        <content name="initial">
+            <h2>Learn about numbers here</h2>
+            <p title="">
+            </p>
+        </content>
+    </item>
+    <item name="client">
+        <content name="initial">
+            <h2>Learn about fractions here</h2>
+            <p title="">&#160;</p>
+        </content>
+    </item>
+    <item name="practice">
+        <content name="initial">
+            <h2>Practice here</h2>
+            <h1>Contact us Initial page</h1>
+            <p title="">&#160;</p>
+        </content>
+    </item>
+</data>

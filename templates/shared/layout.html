@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ m.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'script/jquery-1.12.3.js' %}"></script>
+    <script src="{% static 'script/validation.js' %}"></script>
+</head>
+<body >
+    <div id="body">
+        <!--<div>
+            {% block site %}
+                <span>{{ m.description }}</span>
+            {% endblock %}
+        </div> -->
+        <div id="header">
+            <div>
+                <div>logo</div>
+                <div>
+                    {% for itm in m.menu %}
+                        <div class="{{ itm.class_css }}"><a href="{{ itm.href }}">{{ itm.name }}</a></div>
+                    {% endfor %}
+                    <!-- <form act="" method="post">
+                        <input type="search" id="s" placeholder="Search">
+                    </form> -->
+                </div>
+            </div>
+        </div>
+        <div id="page">
+            <div id="sub-menu">
+                {% for itm in m.sub_menu %}
+                    <span class="{{ itm.class_css }}"><a href="{{ itm.href }}">{{ itm.name }}</a></span>
+                {% endfor %}
+            </div>
+            <!--  page content beginning  -->
+                {% block content %}
+                {% endblock %}
+            <!-- *** page content end *** -->
+        </div>
+        <div id="footer"><div>{{ m.footer }}</div></div>
+    </div>
+</body>
+</html>
