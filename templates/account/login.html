@@ -2,7 +2,7 @@
 {% block content %}
     <div id="gray">
         <div class="header">Log in</div>
-        <form id="user-form" method="post" action="login" enctype="multipart/form-data">
+        <form id="user-form" method="post" action="login/" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="user-form">
                 <label class="required" for="user_name">User name:</label>
