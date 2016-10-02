@@ -80,15 +80,15 @@ html, body {
 }
 #header > div > div > div, #header > div > div:first-child{
     float: left;
-    padding:0 1em 0 1em;
-    line-height: 3em;
+    padding:1em 1em;
+    font-size:large;
 }
 #header > div > div:first-child{
     float:left;
     color:orangered;
 }
 
-.h-on:last-child::after, .h-off:last-child::after{
+/*.h-on:last-child::after,*/ .h-off:last-child > a::after{
     content: '\27E9';
     display: inline-block;
     font-weight: bold;
@@ -97,14 +97,14 @@ html, body {
     transform: rotate(90deg);
 }
 
-.h-on {background: #888888; padding:0;}
-.h-on a, .h-on:last-child::after {color:#ffffff;}
 .h-off {background: #cccccc; padding:0;}
 .h-off a {color:#000000;}
-.h-off a, .h-on a{
-    font-size:large;
+.h-off a/*, .h-on a*/{
     text-decoration:none;
 }
+
+.h-on {background: #888888; padding:0;}
+.h-on a, .h-on:last-child::after {color:#ffffff;}
 /*------------------*/
 #sub-menu {
     position:relative;
@@ -155,6 +155,7 @@ html, body {
     -webkit-transform: translate(-50%);
     transform: translate(-50%);
 }
+
 h1{
     text-align: center;
 }
@@ -207,6 +208,14 @@ label{
 .val{
     color:#f00;
     font-size:small;
+}
+
+.hide {display:none;}
+
+/*------------------*/
+.img-on > img{
+    max-width:100%;
+    width:40em;
 }
 /*------------------*/
 @media screen and  (max-width: 768px) {

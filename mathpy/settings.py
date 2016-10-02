@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'im',
         'PASSWORD': '1234',
-        'HOST': '192.168.10.104',
+        'HOST': '192.168.10.109',
         'PORT': '3306',
         'OPTIONS': {'autocommit': True,},
         #'ENGINE': 'django.db.backends.sqlite3',

@@ -7,9 +7,11 @@ class OnePage:
     p = [Paragraph]
     header = ''
     header_big = ''
+
     img = ''
     img_title = ''
     link = ''
+    img_hide = 'hide'
 
     def __init__(self):
         self

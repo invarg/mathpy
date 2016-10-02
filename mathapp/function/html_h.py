@@ -42,21 +42,19 @@ def set_template(nm='', sub_nm='',usr_in=False):
                     href = '/' + nm + '/' + next_child.attrib['name']
                     m = MenuItem(next_child.attrib["val"], cl, href)
                     l.add_to_submenu(m)
-                cl = 'h-on'
+                cl = 'h-off h-on'
                 title_b = ' - ' + child.attrib["name"]
             else:
                 cl = 'h-off'
             href = '/' + child.attrib['name']
             m = MenuItem(child.attrib["val"], cl, href)
             l.add_to_menu(m)
-        else:
-            if l.title is None and child.tag == 'site-description':
-                title_a = child.attrib["val"]
-                l.description = child.text
-                #l.image = ''
-            else:
-                if child.tag == 'footer':
-                    l.footer = child.text
+        elif l.title is None and child.tag == 'site-description':
+            title_a = child.attrib["val"]
+            l.description = child.text
+            #l.image = ''
+        elif child.tag == 'footer':
+            l.footer = child.text
         #elem.clear()
         l.title = title_a + title_b
     return l
@@ -87,6 +85,7 @@ def content(nm, sub_nm):
                         elif child_b.tag == 'img':
                             c.img = gl.PIC + child_b.attrib["name"]
                             c.img_title = child_b.attrib["title"]
+                            c.img_hide = None
                     break
             break
     return c
